@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* ***** 실제 css 이렇게 import로 작업하면 안됨 성능, 속도 안좋아짐. react, scss 구조 연습삼아 하는거. 프레임워크 이용하지 않으면 이렇게 작업하지 않음 */
+
+/* setting */
+@import url(setting/fonts.css);
+@import url(setting/vars.css);
+@import url(setting/reset.css);
+
+/* section */
+@import url(section/header.css);
+@import url(section/intro.css);
+@import url(section/skill.css);
+@import url(section/site.css);
+@import url(section/port.css);
+@import url(section/contact.css);
+@import url(section/footer.css);
