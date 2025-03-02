@@ -1,3 +1,117 @@
-#header{
-  
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.header_inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(166, 99, 99, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1.6rem;
+}
+.header_logo h1{
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.header_logo a em{
+  font-size: 1rem;
+  display: block;
+  color: var(--black200);
+}
+.header_nav li{
+  display: inline;
+}
+.header_nav li a{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 1.4rem;
+  position: relative;
+}
+.header_nav li a:before{
+  content: '';
+  position: absolute;
+  left: 1.4rem;
+  bottom: 1rem;
+  width: calc(100% - 2.8rem);
+  height: 0.1rem;
+  background-color: var(--black);
+  transform: scaleX(0);
+  transition: 0.35s;
+}
+.header_nav li:hover a:before{
+  transform: scaleX(1);
+}
+.header_nav_mobile{
+  display: none;
+}
+
+@media (max-width: 800px){
+  .header_nav{
+    display: none;
+  }
+  .header_nav.show{
+    display: block;
+  }
+  .header_nav.show ul{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: rgba(166, 99, 99, 0.1);
+    backdrop-filter: blur(15px);
+    z-index: 9999;
+    min-width: 20rem;
+    padding: 2rem 0;
+  }
+  .header_nav.show li{
+    display: block;
+    text-align: right;
+  }
+  .header_nav.show li a{
+    display: inline-block;
+    padding: 1rem;
+  }
+  .header_nav_mobile{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+  }
+  .header_nav.show + .header_nav_mobile span::before, .header_nav.show + .header_nav_mobile span::after{
+    width: 2rem;
+    transition: 0.35s;
+  }
+  .header_nav_mobile span{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: .2rem;
+    background-color: var(--black);
+  }
+  .header_nav_mobile span:before{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    height: .2rem;
+    background-color: var(--black);
+  }
+  .header_nav_mobile span:after{
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    width: 100%;
+    height: .2rem;
+    background-color: var(--black);
+  }
 }
