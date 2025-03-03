@@ -1,3 +1,64 @@
-#skill{
-  
+.skill_inner {
+  padding: 3.2rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+.skill_title {
+  position: sticky;
+  top: 7.2rem;
+  height: 100%;
+  width: 48%;
+  font-family: var(--mainKor-font);
+}
+.skill_title h2 {
+  padding-top: 3rem;
+  font-size: 4vw;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 0.8;
+  color: var(--black);
+  border-bottom: 0.4rem solid var(--black);
+}
+.skill_title em {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.skill_desc {
+  width: 50%;
+}
+.skill_desc span {
+  font-size: 4vw;
+  line-height: 1;
+  font-weight: 900;
+  font-family: var(--mainNum-font);
+}
+.skill_desc h3 {
+  font-size: 2.4rem;
+  text-decoration: underline;
+  text-underline-position: under;
+  margin-bottom: 1vw;
+}
+.skill_desc p {
+  margin-bottom: 30vh;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 800px){
+  .skill_inner {
+    flex-direction: column;
+  }
+  .skill_title{
+    width: 100%;
+    margin-bottom: 20vw;
+    background-color: var(--mainBg-color);
+  }
+  .skill_title h2{
+    font-size: 3.2rem;
+  }
+  .skill_desc {
+    width: 100%;
+  }
+  .skill_desc span{
+    font-size: 10vw;
+  }
 }
